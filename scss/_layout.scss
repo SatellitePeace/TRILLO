@@ -1,0 +1,54 @@
+.container {
+  background: var(--Grey-light-1);
+  max-width: 90vw;
+  margin: 8rem auto;
+
+  box-shadow: var(--shadow-dark);
+}
+.content {
+  background: var(--Grey-light-2);
+  display: flex;
+}
+.header {
+  height: 8rem;
+  background: var(--white);
+  border-bottom: 3px solid var(--Grey-light-3);
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.sidebar {
+  background: var(--Grey-dark-1);
+  display: flex;
+  flex: 0 0 18%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hotel-view {
+  background: var(--Grey-light-4);
+  flex: 1;
+}
+.details {
+  display: flex;
+  margin: 3.5rem;
+}
+
+.description {
+  flex: 0 0 60%;
+  padding: 3rem;
+  background: var(--white);
+  margin-right: 3.5rem;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+}
+.user-reviews {
+  flex: 1;
+}
+.footer {
+  border-top: 3px solid var(--Grey-dark-3);
+  background: #fff;
+  padding: 4.5rem;
+  text-align: center;
+}
