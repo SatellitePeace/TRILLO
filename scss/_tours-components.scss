@@ -70,68 +70,68 @@
 }
 
 .tour-cards {
-  font-size: var(--font-size);
   display: flex;
-
   justify-content: center;
   align-items: center;
   gap: 4rem;
   border-radius: 2rem;
-  box-shadow: var(--shadow-light);
-  @media screen and (max-width: $bp-largest) {
+  @media screen and (max-width: $bp-average) {
     flex-direction: column;
 
     gap: 4rem;
   }
 
   &__general {
-    height: 50rem;
+    height: 55rem;
     width: 30rem;
     background: var(--white);
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
+    border-radius: 1.5rem;
     overflow: hidden;
+    backface-visibility: hidden;
+    box-shadow: 1.5rem 2rem 3rem 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
   &__orange {
     height: 20rem;
     background-image: linear-gradient(
-        to right bottom,
-        rgba(255, 185, 0, 0.6),
-        rgba(255, 119, 48, 0.6)
-      ),
-      url("/img/overlap2.jpg");
-    background-position: bottom right;
-    background-size: cover;
+      to right bottom,
+      rgba(255, 166, 0, 0.753),
+      rgba(255, 69, 0, 0.65)
+    );
+    & > img {
+      mix-blend-mode: multiply;
+    }
   }
   &__green {
     height: 20rem;
     background-image: linear-gradient(
-        to right bottom,
-        rgba(126, 211, 111, 0.5),
-        rgba(40, 180, 133, 0.5)
-      ),
-      url("/img/green.jpg");
-    background-position: bottom right;
-    background-size: cover;
+      to right bottom,
+      rgb(102, 224, 102),
+      hsl(120, 49%, 47%)
+    );
+    & > img {
+      mix-blend-mode: multiply;
+      filter: opacity(0.9);
+    }
   }
   &__blue {
     height: 20rem;
     background-image: linear-gradient(
-        to right bottom,
-        rgba(41, 152, 255, 0.5),
-        rgba(86, 67, 250, 0.5)
-      ),
-      url("/img/snow-adventure.jpg");
-    background-position: bottom right;
-    background-size: cover;
+      to right bottom,
+      rgba(41, 152, 255, 0.5),
+      rgba(86, 67, 250, 0.5)
+    );
+    & > img {
+      mix-blend-mode: multiply;
+    }
   }
+
   &__heading {
     text-align: right;
     text-transform: capitalize;
     font-size: var(--font-size);
-    margin-right: 2rem;
-    padding-top: 15rem;
+    padding: 1.5rem;
   }
   &__heading--orange {
     background-image: linear-gradient(to left bottom, orange, orangered);
@@ -140,10 +140,11 @@
   }
   &__orange--text {
     padding: 2rem;
+    margin-top: 5rem;
   }
   &__orange--list {
     list-style: none;
-    font-size: var(--font-size-small);
+    font-size: 1.3rem;
     text-align: center;
   }
   &__orange--item {
@@ -156,16 +157,14 @@
   }
   &__footer--orange {
     background: linear-gradient(to right bottom, orange, orangered);
-    padding: 1.5rem;
   }
   &__heading--green {
-    background-image: linear-gradient(to left bottom, #7ed56f, #28b485);
+    background-image: linear-gradient(to left bottom, green, darkgreen);
     -webkit-background-clip: text;
     color: transparent;
   }
   &__footer--green {
     background: linear-gradient(to right bottom, #28b485, green);
-    padding: 1.5rem;
   }
   &__heading--blue {
     background-image: linear-gradient(to left bottom, blue, darkblue);
@@ -174,19 +173,76 @@
   }
   &__footer--blue {
     background: linear-gradient(to right bottom, blue, darkblue);
-    padding: 1.5rem;
   }
-  //   &__footer {
-  //     border-bottom-left-radius: 1rem;
-  //     border-bottom-right-radius: 1rem;
-  //   }
+  &__footer {
+    padding: 2rem;
+    font-size: var(--font-size);
+  }
   &__footer--list {
     list-style: none;
     display: flex;
     justify-content: space-around;
+    align-items: center;
   }
   &__footer--item {
     text-transform: uppercase;
     color: var(--white);
   }
 }
+// TOURS BOOKING FORM
+.booking-form {
+  margin: var(--marginbig);
+  padding: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: $bp-average) {
+    flex-direction: column;
+  }
+  &__label {
+    font-size: 1.4rem;
+    text-transform: capitalize;
+  }
+  &__input {
+    display: flex;
+    flex: 0 0 50%;
+    height: 2.8rem;
+    width: 20rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    border: none;
+    outline-color: var(--primaryDark);
+    background: var(--primaryDark);
+    &:focus {
+      background: var(--white);
+    }
+    &::placeholder {
+      color: #000;
+    }
+  }
+  &__option {
+    color: var(--white);
+  }
+  &__submit {
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    padding: 1rem 8rem;
+    background: var(--primaryDark);
+    color: var(--white);
+    font-size: var(--font-size);
+    text-transform: uppercase;
+    display: flex;
+    margin: 0 auto 4rem auto;
+    &:hover {
+      color: var(--white);
+      background: var(--primaryColor);
+    }
+  }
+}
+// .booking-form__submit {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin: 2rem auto;
+// }

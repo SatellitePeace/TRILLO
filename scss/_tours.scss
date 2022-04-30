@@ -1,20 +1,38 @@
-// BACGROUND IMAGE
-.general-content {
-  background: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111, 0.4),
-      rgba(60, 179, 114, 0.8)
-    ),
-    url("/img/form.jpg");
-}
 // main container flex for layout
 .general {
   display: flex;
+  @media screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
 }
+
+// BACGROUND IMAGE
+.general-content {
+  max-width: 82%;
+  @media screen and (max-width: $bp-medium) {
+    max-width: 100%;
+  }
+}
+
 .general-content {
   flex: 1;
 }
 // CARDS SECTION FOR TOURS
 .cardss {
   margin: var(--marginbig);
+}
+// BOOKING SECTION
+.booking {
+  margin: 10rem 3rem 3rem 3rem;
+  background: rgba(255, 255, 255, 0.7);
+
+  &__heading {
+    font-size: 4rem;
+    font-weight: var(--font-weight);
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--primaryDark);
+    padding: 3rem 0;
+    margin-bottom: -10rem;
+  }
 }
