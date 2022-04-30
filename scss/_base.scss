@@ -12,10 +12,27 @@
   --Grey-dark-1: #333;
   --Grey-dark-2: #777;
   --Grey-dark-3: #999;
+
+  --primaryColor: #55c57a;
+  --primaryLight: #7ed56f;
+  --primaryDark: #28b485;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.5);
+  --margin: 2rem;
+  --font-weight: 100;
+  --font-size: 2rem;
+  --font-size-small: 1.6rem;
   --line: 1px solid var(--Grey-light-3);
+  --marginbig: 3rem;
   --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
 }
+$bp-largest: 75em;
+// 75em=1200px=1200/16px
+$bp-large: 68.75em;
+$bp-medium: 56.25em;
+$bp-small: 37.5em;
+
+// 600px
+$bp-smallest: 31.25em;
 * {
   margin: 0;
   padding: 0;
@@ -28,6 +45,9 @@
 }
 html {
   font-size: 62.5%;
+  @media screen and (max-width: $bp-medium) {
+    font-size: 56.25%;
+  }
 }
 body {
   font-family: "Open Sans", sans-serif;

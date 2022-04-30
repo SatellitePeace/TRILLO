@@ -1,0 +1,192 @@
+.tours {
+  margin: var(--marginbig);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2.5rem;
+  &__heading {
+    font-size: 5rem;
+    font-weight: var(--font-weight);
+    text-transform: uppercase;
+    background-image: linear-gradient(to right bottom, #28b485, #55c57a);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  &__subheading {
+    font-size: 2.5rem;
+    font-weight: var(--font-weight);
+    text-transform: capitalize;
+    color: var(--Grey-dark-1);
+  }
+}
+// TOURS DESCRIPTION/ABOUT TRILLLO TOURS
+.tours-description {
+  margin: var(--marginbig);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2.5rem;
+
+  &__text {
+    font-size: var(--font-size-small);
+    line-height: 2.3rem;
+    word-spacing: 4px;
+    color: var(--Grey-dark-1);
+  }
+  &__rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size);
+    color: var(--primaryDark);
+    text-transform: uppercase;
+  }
+  &__name {
+    font-size: var(--font-size);
+    color: var(--primaryDark);
+    margin-right: auto;
+  }
+  &__stars {
+    display: flex;
+    margin-right: auto;
+  }
+  &__list {
+    list-style: none;
+  }
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--primaryDark);
+  }
+}
+// TOURSIDT SECTION WITH HEADING FOR CARDS
+.tourists {
+  //   margin: var(--marginbig);
+  text-align: center;
+  &__heading {
+    font-size: 4rem;
+    padding: 5rem;
+    font-weight: var(--font-weight);
+    color: var(--white);
+    text-transform: uppercase;
+  }
+}
+
+.tour-cards {
+  font-size: var(--font-size);
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  border-radius: 2rem;
+  box-shadow: var(--shadow-light);
+  @media screen and (max-width: $bp-largest) {
+    flex-direction: column;
+
+    gap: 4rem;
+  }
+
+  &__general {
+    height: 50rem;
+    width: 30rem;
+    background: var(--white);
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    overflow: hidden;
+  }
+
+  &__orange {
+    height: 20rem;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(255, 185, 0, 0.6),
+        rgba(255, 119, 48, 0.6)
+      ),
+      url("/img/overlap2.jpg");
+    background-position: bottom right;
+    background-size: cover;
+  }
+  &__green {
+    height: 20rem;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(126, 211, 111, 0.5),
+        rgba(40, 180, 133, 0.5)
+      ),
+      url("/img/green.jpg");
+    background-position: bottom right;
+    background-size: cover;
+  }
+  &__blue {
+    height: 20rem;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(41, 152, 255, 0.5),
+        rgba(86, 67, 250, 0.5)
+      ),
+      url("/img/snow-adventure.jpg");
+    background-position: bottom right;
+    background-size: cover;
+  }
+  &__heading {
+    text-align: right;
+    text-transform: capitalize;
+    font-size: var(--font-size);
+    margin-right: 2rem;
+    padding-top: 15rem;
+  }
+  &__heading--orange {
+    background-image: linear-gradient(to left bottom, orange, orangered);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  &__orange--text {
+    padding: 2rem;
+  }
+  &__orange--list {
+    list-style: none;
+    font-size: var(--font-size-small);
+    text-align: center;
+  }
+  &__orange--item {
+    text-transform: capitalize;
+    margin-bottom: var(--margin);
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--Grey-dark-1);
+      padding-bottom: 0.5rem;
+    }
+  }
+  &__footer--orange {
+    background: linear-gradient(to right bottom, orange, orangered);
+    padding: 1.5rem;
+  }
+  &__heading--green {
+    background-image: linear-gradient(to left bottom, #7ed56f, #28b485);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  &__footer--green {
+    background: linear-gradient(to right bottom, #28b485, green);
+    padding: 1.5rem;
+  }
+  &__heading--blue {
+    background-image: linear-gradient(to left bottom, blue, darkblue);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  &__footer--blue {
+    background: linear-gradient(to right bottom, blue, darkblue);
+    padding: 1.5rem;
+  }
+  //   &__footer {
+  //     border-bottom-left-radius: 1rem;
+  //     border-bottom-right-radius: 1rem;
+  //   }
+  &__footer--list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  &__footer--item {
+    text-transform: uppercase;
+    color: var(--white);
+  }
+}
