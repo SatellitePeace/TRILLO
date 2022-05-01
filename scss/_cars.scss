@@ -1,0 +1,36 @@
+// First section containing rental information
+.rental {
+  background: var(--Grey-light-4);
+}
+.cars-flex {
+  background: var(--Grey-light-4);
+  &__heading {
+    font-size: 4rem;
+    font-weight: var(--font-weight);
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 3rem 3rem 3rem;
+    padding-top: var(--font-size-big);
+    color: var(--Primary-dark);
+    @media screen and (max-width: $bp-average) {
+      font-size: var(--font-size);
+    }
+  }
+}
+.cars,
+.motors,
+.vehicle {
+  margin: 0 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
+}
+// FOOTER
+.rental-footer {
+  background: var(--white);
+  padding: 5rem;
+}

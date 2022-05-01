@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cars</title>
+    <link rel="stylesheet" href="./dist/csss/main.css">
+</head>
+<body>
+    <div class="container">
+<header class="header">
+        <img src="./img/logo.png" alt="trillo logo" class="logo" />
+        <form action="#" class="search">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="search hotels"
+          />
+          <button class="search__button">
+            <svg class="search__icon">
+              <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+            </svg>
+          </button>
+        </form>
+        <nav class="user-nav">
+        <div class="user-nav__icon-box">
+          <svg class="user-nav__icon">
+            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+          </svg>
+          <span class="user-nav__notification">7</span>
+
+          <!--  -->
+          <svg class="user-nav__icon">
+            <use xlink:href="img/sprite.svg#icon-chat"></use>
+          </svg>
+          <span class="user-nav__notification2">13</span>
+          <!--  -->
+        </div>
+        <div class="user-nav__user">
+          <img
+            src="./img/user.jpg"
+            alt="ser photo"
+            class="user-nav__user-photo"
+          />
+          <span class="user-nav__user-name">Jonas</span>
+        </div>
+      </header>
+<!-- end of header -->
+<div class="general">
+<nav class="sidebar">
+ <ul class="side-nav">
+           
+            <li class="side-nav__item ">
+              <a href="hotel.html" class="side-nav__link"> 
+ <svg class="side-nav__icon">
+              <use xlink href="img/sprite.svg#icon-home"></use>
+            </svg>
+            <span class="side-nav__name ">hotel</span>
+              </a>
+            </li>
+              <li class="side-nav__item">
+              <a href="flight.html" class="side-nav__link"> 
+              <svg class="side-nav__icon">
+        <use xlink href="img/sprite.svg#icon-aircraft-take-off"></use>
+      </svg>
+            <span class="side-nav__name">flight</span>
+              </a>
+            </li>
+              <li class="side-nav__item side-nav__item--active">
+              <a href="cars.html" class="side-nav__link"> 
+ <svg class="side-nav__icon">
+              <use xlink href="img/sprite.svg#icon-key"></use>
+            </svg>
+            <span class="side-nav__name">car rental</span>
+              </a>
+            </li>
+              <li class="side-nav__item ">
+              <a href="tours.html" class="side-nav__link"> 
+ <svg class="side-nav__icon">
+              <use xlink href="img/sprite.svg#icon-map"></use>
+            </svg>
+            <span class="side-nav__name">tours</span>
+              </a>
+            </li>
+            <li class="side-nav__item ">
+              <a href="index.html" class="side-nav__link"> 
+ <svg class="side-nav__icon ">
+              <use xlink href="img/sprite.svg#icon-location-pin"></use>
+            </svg>
+            <span class="side-nav__name">home</span>
+              </a>
+            </li>
+          </ul>
+          <div class="legal">&copy; trillo 2022, all rights reserved.</div>
+</nav>
+<main class="general-content">
+    <section class="rental">
+        <div class="rental-info">
+            <h1 class="rental-info__heading">
+           trillo car rentals
+        </h1>
+        <article class="rental-info__message">
+           <p class="rental-info__text">
+                Trillo car rentals offers you a variety of cars suitable for several occasions at affortable  prices.
+           </p>
+           <p class="rental-info__text">
+               Our car rent prices are fixed for periods ranging from, 1-7 days.
+           </p>
+            <p class="rental-info__text">
+              If you desire to rent our cars for more than seven days, the price will be subject to negotiation.
+              HAPPY RENTING!!.
+           </p>
+        </article>
+        </div>
+    </section>
+<div class="cars-flex">
+    <h2 class="cars-flex__heading">
+our rental collection
+    </h2>
+    <section class="cars">
+<article class="rent">
+    <img src="./img/range-rover.jpg" alt="photo of range rover" class="rent__one">
+    <div class="rent__review rent__review--1">
+        <span class="rent__review--name">
+range-rover
+        </span>
+        <span class="rent__review--stars">
+            <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+        </span>
+        <span class="rent__review--average">
+            7.3/10    
+        </span>
+    </div>
+    <div class="rent__content">
+        <ul class="rent__content--list">
+            <li class="rent__content--item">
+               1-2 days = 15,000
+            </li>
+             <li class="rent__content--item">
+              3-5 days = 27,000
+            </li>
+             <li class="rent__content--item">
+          4-7 days = 50,000
+            </li>
+             <li class="rent__content--item">
+              8 days and above = negotiable
+            </li>
+        </ul>
+    </div>
+    <footer class="rent__footer rent__review--1">
+          <a href="#" class="rent__footer--link"><h6 class="rent__footer--heading">
+            rent now
+        </h6></a>
+    </footer>
+</article>
+<!-- end of first car -->
+<article class="rent">
+    <img src="./img/vintage.jpg" alt="photo of vintage car" class="rent__one">
+    <div class="rent__review rent__review--2">
+        <span class="rent__review--name">
+vintage car
+        </span>
+        <span class="rent__review--stars">
+            <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+        </span>
+        <span class="rent__review--average">
+            8.1/10
+        </span>  
+    </div>
+    <div class="rent__content">
+        <ul class="rent__content--list">
+            <li class="rent__content--item">
+               1-2 days = 17,000
+            </li>
+             <li class="rent__content--item">
+               3-4 days = 30,000
+            </li>
+             <li class="rent__content--item">
+               5-7 days = 55,000
+            </li>
+             <li class="rent__content--item">
+               8 days and above = negotiable
+            </li>
+        </ul>
+    </div>
+    <footer class="rent__footer rent__review--2">
+          <a href="#" class="rent__footer--link"><h6 class="rent__footer--heading">
+            rent now
+        </h6></a>
+    </footer>
+</article>
+<!-- end of car two -->
+<article class="rent">
+    <img src="./img/benz.jpg" alt="photo of Benz" class="rent__one">
+    <div class="rent__review rent__review--3">
+        <span class="rent__review--name">
+benz
+        </span>
+        <span class="rent__review--stars">
+            <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+        </span>
+        <span class="rent__review--average">
+            6.9/10
+        </span>  
+    </div>
+    <div class="rent__content">
+        <ul class="rent__content--list">
+            <li class="rent__content--item">
+              1-2 days = 20,000
+            </li>
+             <li class="rent__content--item">
+               3-4 days = 39,000
+            </li>
+             <li class="rent__content--item">
+              5-7 days = 60,000
+            </li>
+             <li class="rent__content--item">
+               8 days and above = negotiable
+            </li>
+        </ul>
+    </div>
+    <footer class="rent__footer rent__review--3">
+          <a href="#" class="rent__footer--link"><h6 class="rent__footer--heading">
+            rent now
+        </h6></a>
+    </footer>
+</article>
+</section>
+<!-- end of section one containing the first flex -->
+<section class="motors">
+<article class="rent">
+    <img src="./img/g-wagon.jpg" alt="photo of g-wagon" class="rent__one">
+    <div class="rent__review rent__review--4">
+        <span class="rent__review--name">
+g-wagon
+        </span>
+        <span class="rent__review--stars">
+            <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+        </span>
+        <span class="rent__review--average">
+            7.3/10
+        </span>  
+    </div>
+    <div class="rent__content">
+        <ul class="rent__content--list">
+            <li class="rent__content--item">
+               1-2 days = 15,500
+            </li>
+             <li class="rent__content--item">
+               3-4 days = 28,500
+            </li>
+             <li class="rent__content--item">
+               5-7 days = 51,500
+            </li>
+             <li class="rent__content--item">
+               8 days and above = negotiable
+            </li>
+        </ul>
+    </div>
+    <footer class="rent__footer rent__review--4">
+         <a href="#" class="rent__footer--link"><h6 class="rent__footer--heading">
+            rent now
+        </h6></a>
+    </footer>
+</article>
+<!-- end of first car -->
+<article class="rent">
+    <img src="./img/camry.jpg" alt="photo of camry car" class="rent__one">
+    <div class="rent__review rent__review--5">
+        <span class="rent__review--name">
+camry car
+        </span>
+        <span class="rent__review--stars">
+            <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+        </span>
+        <span class="rent__review--average">
+            8.1/10
+        </span>
+    </div>
+    <div class="rent__content">
+        <ul class="rent__content--list">
+            <li class="rent__content--item">
+               12 days = 10,000
+            </li>
+             <li class="rent__content--item">
+               3-4 days = 18,000
+            </li>
+             <li class="rent__content--item">
+              5-7 days = 26,000
+            </li>
+             <li class="rent__content--item">
+                8 days and above = negotiable
+            </li>
+        </ul>
+    </div>
+    <footer class="rent__footer rent__review--5 ">
+        <a href="#" class="rent__footer--link"><h6 class="rent__footer--heading">
+            rent now
+        </h6></a>
+    </footer>
+</article>
+<!-- end of car two -->
+<article class="rent">
+    <img src="./img/audi.jpg" alt="photo of audi" class="rent__one">
+    <div class="rent__review rent__review--6">
+        <span class="rent__review--name">
+audi
+        </span>
+        <span class="rent__review--stars">
+            <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+        </span>
+        <span class="rent__review--average">
+            6.9/10
+        </span>
+    </div>
+    <div class="rent__content">
+        <ul class="rent__content--list">
+            <li class="rent__content--item">
+               1-2 days = 13,000
+            </li>
+             <li class="rent__content--item">
+              3-4 days = 23,000
+            </li>
+             <li class="rent__content--item">
+               5-7 days = 34,000
+            </li>
+             <li class="rent__content--item">
+               8 days and above = negotiable
+            </li>
+        </ul>
+    </div>
+    <footer class="rent__footer rent__review--6">
+         <a href="#" class="rent__footer--link"><h6 class="rent__footer--heading">
+            rent now
+        </h6></a>
+    </footer>
+</article>
+</section>
+<!-- END OF CAR FLEX SECTION TWO -->
+<section class="vehicle">
+<article class="rent">
+    <img src="./img/rolls-royce.jpg" alt="photo of rolls royce" class="rent__one">
+    <div class="rent__review rent__review--8">
+        <span class="rent__review--name">
+rolls-royce
+        </span>
+        <span class="rent__review--stars">
+            <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+        </span>
+        <span class="rent__review--average">
+            8.1/10
+        </span>
+    </div>
+    <div class="rent__content">
+        <ul class="rent__content--list">
+            <li class="rent__content--item">
+               1-2 days = 20,000
+            </li>
+             <li class="rent__content--item">
+                3-4 days = 35,000
+            </li>
+             <li class="rent__content--item">
+                5-7 days = 50,000
+            </li>
+             <li class="rent__content--item">
+               8 days and above = negotiable
+            </li>
+        </ul>
+    </div>
+    <footer class="rent__footer rent__review--8 ">
+         <a href="#" class="rent__footer--link"><h6 class="rent__footer--heading">
+            rent now
+        </h6></a>
+    </footer>
+</article>
+<!-- end of first car -->
+<article class="rent">
+    <img src="./img/rv-camper.jpg" alt="photo of rv camper" class="rent__one">
+    <div class="rent__review rent__review--9">
+        <span class="rent__review--name">
+rv camper
+        </span>
+        <span class="rent__review--stars">
+            <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+        </span>
+        <span class="rent__review--average">
+            6.9/10
+        </span>
+    </div>
+    <div class="rent__content">
+        <ul class="rent__content--list">
+            <li class="rent__content--item">
+               1-2 days = 6,500
+            </li>
+             <li class="rent__content--item">
+               3-4 days = 14,000
+            </li>
+             <li class="rent__content--item">
+               5-7 days = 23,500
+            </li>
+             <li class="rent__content--item">
+                8 days and above = negotiable
+            </li>
+        </ul>
+    </div>
+    <footer class="rent__footer rent__review--9 ">
+        <a href="#" class="rent__footer--link"><h6 class="rent__footer--heading">
+            rent now
+        </h6></a>
+    </footer>
+</article>
+<!--  -->
+<!-- end of car two -->
+<article class="rent">
+    <img src="./img/lexus.jpg" alt="photo of lexus car" class="rent__one">
+    <div class="rent__review rent__review--7">
+        <span class="rent__review--name">
+lexus
+        </span>
+        <span class="rent__review--stars">
+            <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+  <svg class="rent__review-stars">
+  <use xlink href="img/sprite.svg#icon-star"></use>
+</svg>
+        </span>
+        <span class="rent__review--average">
+            7.3/10
+        </span>
+    </div>
+    <div class="rent__content">
+        <ul class="rent__content--list">
+            <li class="rent__content--item">
+               1-2 days = 8,000
+            </li>
+             <li class="rent__content--item">
+              3-4 days = 14,500
+            </li>
+             <li class="rent__content--item">
+               5-7 days = 23,000
+            </li>
+             <li class="rent__content--item">
+                8 days and above = negotiable
+            </li>
+        </ul>
+    </div>
+    <footer class="rent__footer rent__review--7">
+         <a href="#" class="rent__footer--link"><h6 class="rent__footer--heading">
+            rent now
+        </h6></a>
+    </footer>
+</article>
+</section>
+</div>
+<!-- END OF CAR CARDS -->
+<footer class="rental-footer">
+<ul class="rental-footer__list-one">
+     <li class="rental-footer__item-one">
+        for price negotiations call  <a href="#" class="rental-footer__number">+234-000-222-888</a>
+    </li>
+    <li class="rental-footer__item-one">
+        for more info call <a href="#" class="rental-footer__number"> +234-000-111-777</a>
+    </li>
+     <li class="rental-footer__item-one">
+     <a href="#" class="rental-footer__number">terms and conditions</a>
+    </li>
+</ul>
+</footer>
+</main>
+</div>
+    </div>
+</body>
+</html>

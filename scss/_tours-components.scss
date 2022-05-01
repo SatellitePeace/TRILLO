@@ -96,11 +96,12 @@
     height: 20rem;
     background-image: linear-gradient(
       to right bottom,
-      rgba(255, 166, 0, 0.753),
-      rgba(255, 69, 0, 0.65)
+      rgb(255, 166, 0),
+      #ff4500
     );
     & > img {
       mix-blend-mode: multiply;
+      filter: opacity(0.75);
     }
   }
   &__green {
@@ -112,7 +113,7 @@
     );
     & > img {
       mix-blend-mode: multiply;
-      filter: opacity(0.9);
+      filter: opacity(0.6) brightness(80%);
     }
   }
   &__blue {
@@ -240,9 +241,3 @@
     }
   }
 }
-// .booking-form__submit {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   margin: 2rem auto;
-// }

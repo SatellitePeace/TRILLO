@@ -17,6 +17,7 @@
   --font-weight: 100;
   --font-size: 2rem;
   --font-size-small: 1.6rem;
+  --font-size-big: 5rem;
   --line: 1px solid var(--Grey-light-3);
   --marginbig: 3rem;
   --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
@@ -1125,15 +1126,29 @@ body {
   padding: 3rem 5rem;
 }
 
-.general-content {
-  background: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.4)), to(rgba(60, 179, 114, 0.8))), url("/img/form.jpg");
-  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.4), rgba(60, 179, 114, 0.8)), url("/img/form.jpg");
-}
-
 .general {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 56.25em) {
+  .general {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.general-content {
+  max-width: 82%;
+}
+
+@media screen and (max-width: 56.25em) {
+  .general-content {
+    max-width: 100%;
+  }
 }
 
 .general-content {
@@ -1144,6 +1159,21 @@ body {
 
 .cardss {
   margin: var(--marginbig);
+}
+
+.booking {
+  margin: 10rem 3rem 3rem 3rem;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.booking__heading {
+  font-size: 4rem;
+  font-weight: var(--font-weight);
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--primaryDark);
+  padding: 3rem 0;
+  margin-bottom: -10rem;
 }
 
 .tours {
@@ -1234,7 +1264,6 @@ body {
 }
 
 .tour-cards {
-  font-size: var(--font-size);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1246,11 +1275,9 @@ body {
           align-items: center;
   gap: 4rem;
   border-radius: 2rem;
-  -webkit-box-shadow: var(--shadow-light);
-          box-shadow: var(--shadow-light);
 }
 
-@media screen and (max-width: 75em) {
+@media screen and (max-width: 43.5em) {
   .tour-cards {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1261,44 +1288,56 @@ body {
 }
 
 .tour-cards__general {
-  height: 50rem;
+  height: 55rem;
   width: 30rem;
   background: var(--white);
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
+  border-radius: 1.5rem;
   overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-box-shadow: 1.5rem 2rem 3rem 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 1.5rem 2rem 3rem 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .tour-cards__orange {
   height: 20rem;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 185, 0, 0.6)), to(rgba(255, 119, 48, 0.6))), url("/img/overlap2.jpg");
-  background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.6), rgba(255, 119, 48, 0.6)), url("/img/overlap2.jpg");
-  background-position: bottom right;
-  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffa600), to(#ff4500));
+  background-image: linear-gradient(to right bottom, #ffa600, #ff4500);
+}
+
+.tour-cards__orange > img {
+  mix-blend-mode: multiply;
+  -webkit-filter: opacity(0.75);
+          filter: opacity(0.75);
 }
 
 .tour-cards__green {
   height: 20rem;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 211, 111, 0.5)), to(rgba(40, 180, 133, 0.5))), url("/img/green.jpg");
-  background-image: linear-gradient(to right bottom, rgba(126, 211, 111, 0.5), rgba(40, 180, 133, 0.5)), url("/img/green.jpg");
-  background-position: bottom right;
-  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#66e066), to(#3db33d));
+  background-image: linear-gradient(to right bottom, #66e066, #3db33d);
+}
+
+.tour-cards__green > img {
+  mix-blend-mode: multiply;
+  -webkit-filter: opacity(0.6) brightness(80%);
+          filter: opacity(0.6) brightness(80%);
 }
 
 .tour-cards__blue {
   height: 20rem;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(41, 152, 255, 0.5)), to(rgba(86, 67, 250, 0.5))), url("/img/snow-adventure.jpg");
-  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.5), rgba(86, 67, 250, 0.5)), url("/img/snow-adventure.jpg");
-  background-position: bottom right;
-  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(41, 152, 255, 0.5)), to(rgba(86, 67, 250, 0.5)));
+  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.5), rgba(86, 67, 250, 0.5));
+}
+
+.tour-cards__blue > img {
+  mix-blend-mode: multiply;
 }
 
 .tour-cards__heading {
   text-align: right;
   text-transform: capitalize;
   font-size: var(--font-size);
-  margin-right: 2rem;
-  padding-top: 15rem;
+  padding: 1.5rem;
 }
 
 .tour-cards__heading--orange {
@@ -1310,11 +1349,12 @@ body {
 
 .tour-cards__orange--text {
   padding: 2rem;
+  margin-top: 5rem;
 }
 
 .tour-cards__orange--list {
   list-style: none;
-  font-size: var(--font-size-small);
+  font-size: 1.3rem;
   text-align: center;
 }
 
@@ -1331,12 +1371,11 @@ body {
 .tour-cards__footer--orange {
   background: -webkit-gradient(linear, left top, right bottom, from(orange), to(orangered));
   background: linear-gradient(to right bottom, orange, orangered);
-  padding: 1.5rem;
 }
 
 .tour-cards__heading--green {
-  background-image: -webkit-gradient(linear, right top, left bottom, from(#7ed56f), to(#28b485));
-  background-image: linear-gradient(to left bottom, #7ed56f, #28b485);
+  background-image: -webkit-gradient(linear, right top, left bottom, from(green), to(darkgreen));
+  background-image: linear-gradient(to left bottom, green, darkgreen);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -1344,7 +1383,6 @@ body {
 .tour-cards__footer--green {
   background: -webkit-gradient(linear, left top, right bottom, from(#28b485), to(green));
   background: linear-gradient(to right bottom, #28b485, green);
-  padding: 1.5rem;
 }
 
 .tour-cards__heading--blue {
@@ -1357,7 +1395,11 @@ body {
 .tour-cards__footer--blue {
   background: -webkit-gradient(linear, left top, right bottom, from(blue), to(darkblue));
   background: linear-gradient(to right bottom, blue, darkblue);
-  padding: 1.5rem;
+}
+
+.tour-cards__footer {
+  padding: 2rem;
+  font-size: var(--font-size);
 }
 
 .tour-cards__footer--list {
@@ -1367,9 +1409,342 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .tour-cards__footer--item {
   text-transform: uppercase;
   color: var(--white);
+}
+
+.booking-form {
+  margin: var(--marginbig);
+  padding: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 43.5em) {
+  .booking-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.booking-form__label {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+.booking-form__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  height: 2.8rem;
+  width: 20rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  border: none;
+  outline-color: var(--primaryDark);
+  background: var(--primaryDark);
+}
+
+.booking-form__input:focus {
+  background: var(--white);
+}
+
+.booking-form__input::-webkit-input-placeholder {
+  color: #000;
+}
+
+.booking-form__input:-ms-input-placeholder {
+  color: #000;
+}
+
+.booking-form__input::-ms-input-placeholder {
+  color: #000;
+}
+
+.booking-form__input::placeholder {
+  color: #000;
+}
+
+.booking-form__option {
+  color: var(--white);
+}
+
+.booking-form__submit {
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  padding: 1rem 8rem;
+  background: var(--primaryDark);
+  color: var(--white);
+  font-size: var(--font-size);
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto 4rem auto;
+}
+
+.booking-form__submit:hover {
+  color: var(--white);
+  background: var(--primaryColor);
+}
+
+.rental-info {
+  margin: 0 3rem;
+  padding: 2rem;
+}
+
+.rental-info__heading {
+  text-transform: uppercase;
+  font-size: var(--font-size-big);
+  font-weight: var(--font-weight);
+  color: var(--Primary-dark);
+  text-align: center;
+  margin-bottom: var(--margin);
+  padding-top: var(--margin);
+}
+
+@media screen and (max-width: 43.5em) {
+  .rental-info__heading {
+    font-size: var(--font-size);
+  }
+}
+
+.rental-info__text {
+  font-size: var(--font-size);
+}
+
+.rental-info__text:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 43.5em) {
+  .rental-info__text {
+    font-size: var(--font-size-small);
+  }
+}
+
+.rent {
+  background: var(--white);
+  margin: 2.2rem;
+  -webkit-box-shadow: var(--shadow-light);
+          box-shadow: var(--shadow-light);
+  overflow: hidden;
+  -webkit-box-shadow: var(--shadow-dark);
+          box-shadow: var(--shadow-dark);
+  border-radius: 1.5rem;
+}
+
+.rent__one {
+  width: 100%;
+  height: 30rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.rent__review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 1rem;
+  text-transform: capitalize;
+  color: var(--white);
+}
+
+.rent__review-stars {
+  height: 1.7rem;
+  width: 1.6rem;
+  fill: currentColor;
+}
+
+.rent__review--average, .rent__review--count, .rent__review--name {
+  font-size: 1.5rem;
+}
+
+.rent__review--1 {
+  background: blanchedalmond;
+}
+
+.rent__review--2 {
+  background: brown;
+}
+
+.rent__review--3 {
+  background: goldenrod;
+}
+
+.rent__review--4 {
+  background: var(--Grey-dark-3);
+}
+
+.rent__review--5 {
+  background: black;
+}
+
+.rent__review--6 {
+  background: darkblue;
+}
+
+.rent__review--7 {
+  background: #838996;
+}
+
+.rent__review--8 {
+  background: gold;
+}
+
+.rent__review--9 {
+  background: darkred;
+}
+
+.rent__content {
+  padding: 2rem 2rem;
+}
+
+.rent__content--item {
+  list-style: none;
+  font-size: var(--font-size-small);
+  text-align: center;
+  line-height: 3rem;
+}
+
+.rent__content--item:not(:last-child) {
+  border-bottom: 1px solid var(--Primary-dark);
+  padding: 0.5rem;
+}
+
+.rent__footer {
+  padding: 2rem 0;
+}
+
+.rent__footer--heading {
+  color: var(--white);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  text-transform: uppercase;
+  text-align: center;
+  word-spacing: 1rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.rent__footer--heading:hover {
+  color: var(--Primary-dark);
+}
+
+.rent__footer--link {
+  text-decoration: none;
+}
+
+.rental-footer {
+  text-align: center;
+}
+
+.rental-footer__item-one {
+  list-style: none;
+  padding: 1rem;
+  font-size: var(--font-size);
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 37.5em) {
+  .rental-footer__item-one {
+    font-size: var(--font-size-small);
+  }
+}
+
+.rental-footer__number {
+  font-size: var(--font-size);
+  color: var(--Primary-dark);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+@media screen and (max-width: 37.5em) {
+  .rental-footer__number {
+    font-size: var(--font-size-small);
+  }
+}
+
+.rental-footer__number:hover {
+  color: var(--color-primary);
+}
+
+.rental {
+  background: var(--Grey-light-4);
+}
+
+.cars-flex {
+  background: var(--Grey-light-4);
+}
+
+.cars-flex__heading {
+  font-size: 4rem;
+  font-weight: var(--font-weight);
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 3rem 3rem 3rem;
+  padding-top: var(--font-size-big);
+  color: var(--Primary-dark);
+}
+
+@media screen and (max-width: 43.5em) {
+  .cars-flex__heading {
+    font-size: var(--font-size);
+  }
+}
+
+.cars,
+.motors,
+.vehicle {
+  margin: 0 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 56.25em) {
+  .cars,
+  .motors,
+  .vehicle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.rental-footer {
+  background: var(--white);
+  padding: 5rem;
 }
