@@ -2,7 +2,7 @@
   background: var(--Grey-light-1);
   max-width: 90vw;
   margin: 8rem auto;
-
+  overflow: hidden;
   box-shadow: var(--shadow-dark);
   @media screen and (max-width: $bp-large) {
     margin: 0 0 0 0;
@@ -13,6 +13,7 @@
 .content {
   background: var(--Grey-light-2);
   display: flex;
+  overflow: hidden;
   @media screen and (max-width: $bp-medium) {
     flex-direction: column;
   }
@@ -24,6 +25,8 @@
   font-size: 1rem;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 100;
 }
 .sidebar {
   background: var(--Grey-dark-1);
@@ -31,6 +34,12 @@
   flex: 0 0 18%;
   flex-direction: column;
   justify-content: space-between;
+  @media screen and (max-width: $bp-medium) {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
 }
 .hotel-view {
   background: var(--Grey-light-4);
