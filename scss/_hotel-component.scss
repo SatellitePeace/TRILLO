@@ -6,6 +6,9 @@
   margin-left: 2rem;
   align-self: center;
   object-fit: cover;
+  @media screen and (max-width: $bp-smallest) {
+    display: none;
+  }
 }
 
 .search {
@@ -14,7 +17,9 @@
   display: flex;
   align-items: center;
   flex: 0 0 30%;
-
+  @media screen and (max-width: $bp-smallest) {
+    margin: 2rem;
+  }
   &__input {
     display: flex;
     padding: 0.5rem 2rem;
@@ -98,6 +103,9 @@
     font-size: 2rem;
     display: flex;
     align-items: center;
+    @media screen and (max-width: $bp-smallest) {
+      margin: 2.5rem;
+    }
   }
   &__signup {
     display: flex;
@@ -146,7 +154,7 @@
     height: 100%;
     width: 100%;
     top: 4.5rem;
-    right: 3rem;
+    right: 5rem;
     z-index: 1000;
     display: none;
     max-width: 35rem;

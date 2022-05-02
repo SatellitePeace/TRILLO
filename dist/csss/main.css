@@ -64,6 +64,12 @@ body {
      object-fit: cover;
 }
 
+@media screen and (max-width: 31.25em) {
+  .logo {
+    display: none;
+  }
+}
+
 .search {
   font-size: inherit;
   font-weight: inherit;
@@ -76,6 +82,12 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 30%;
           flex: 0 0 30%;
+}
+
+@media screen and (max-width: 31.25em) {
+  .search {
+    margin: 2rem;
+  }
 }
 
 .search__input {
@@ -208,6 +220,12 @@ body {
           align-items: center;
 }
 
+@media screen and (max-width: 31.25em) {
+  .user-nav__user {
+    margin: 2.5rem;
+  }
+}
+
 .user-nav__signup {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -277,7 +295,7 @@ body {
   height: 100%;
   width: 100%;
   top: 4.5rem;
-  right: 3rem;
+  right: 5rem;
   z-index: 1000;
   display: none;
   max-width: 35rem;
@@ -1965,6 +1983,12 @@ body {
   max-width: 45rem;
   padding: 3rem;
   background: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 37.5em) {
+  .flight__main {
+    background: transparent;
+  }
 }
 
 .flight__pay {
