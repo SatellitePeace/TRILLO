@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRILLO||FLIGHTS</title>
+    <link rel="shortcut icon" href="./img/favicon (2).png" type="image/x-icon">
+    <link rel="stylesheet" href="./dist/csss/main.css">
+  </head>
+  <body>
+    <div class="container">
+        <header class="header">
+        <img src="./img/logo.png" alt="trillo logo" class="logo" />
+        <form action="#" class="search">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="search hotels"
+          />
+          <button class="search__button">
+            <svg class="search__icon">
+              <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+            </svg>
+          </button>
+        </form>
+        <nav class="user-nav">
+        <div class="user-nav__icon-box">
+            <div class="user">
+            <svg class="user-nav__icon">
+            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+          </svg>
+          <span class="user-nav__notification">4</span>
+          <!-- dropdown -->
+           <div class="user__dropdown user__dropdowns">
+            <ul class="user__dropdown--list">
+              <li class="user__dropdown--item user__dropdown--items"> 
+              grace replied your message
+              </li> 
+               <li class="user__dropdown--item user__dropdown--items">
+           get ready for your tour
+              </li>
+               <li class="user__dropdown--item user__dropdown--items">
+           your hotel payment has been processed successfully
+              </li>
+               <li class="user__dropdown--item user__dropdown--items"> a vintage car is ready for rent
+              </li>
+            </ul>
+          </div>
+          </div>
+          
+<!-- =============== -->
+          <!-- ============= -->
+        <div class="user">
+            <svg class="user-nav__icon user">
+            <use xlink:href="img/sprite.svg#icon-chat"></use>
+          </svg>
+          <span class="user-nav__notification2">13</span>
+          <!--  -->
+          <div class="user__dropdown user__dropdowns">
+            <ul class="user__dropdown--list">
+              <li class="user__dropdown--item user__dropdown--items ">
+              
+              <a href="#" class="user__dropdown--items ">
+  <img src="./img/user-2.jpg" alt="user three photo" class="user__dropdown--photo">
+                hey nneoma whats up
+              </a>
+              </li>
+              
+               <li class="user__dropdown--item  user__dropdown--items">
+             <a href="#" class="user__dropdown--items"> <img src="./img/user-5.jpg" alt="user 5" class="user__dropdown--photo">
+            i cant wait for the tour next week 
+            </a>
+              </li>
+               <li class="user__dropdown--item  user__dropdown--items">
+             <a href="#" class="user__dropdown--items"> <img src="./img/user-6.jpg" alt="user 6" class="user__dropdown--photo">don't forget your sunglasses. </a>
+              </li>
+               <li class="user__dropdown--item  user__dropdown--items">
+             <a href="#" class="user__dropdown--items"> you have 10 more chats</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+          <!--  -->
+        </div>
+        <div class="user-nav__user user">
+          <img
+            src="./img/user (2).jpg"
+            alt="ser photo"
+            class="user-nav__user-photo"
+          />
+          <span class="user-nav__user-name">Nneoma</span>
+           <div class="user__dropdown">
+            <ul class="user__dropdown--list">
+              <li class="user__dropdown--item">
+              <a href="#" class="user__dropdown--link">log <span>in</span></a>
+              </li>
+              
+               <li class="user__dropdown--item">
+             <a href="#" class="user__dropdown--link"> my  <span>profile</span></a>
+              </li>
+               <li class="user__dropdown--item">
+             <a href="#" class="user__dropdown--link"> settings</a>
+              </li>
+               <li class="user__dropdown--item">
+             <a href="#" class="user__dropdown--link"> log  <span>out</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="general">
+          <nav class="sidebar">
+                  <ul class="side-nav">
+           
+            <li class="side-nav__item ">
+              <a href="hotel.html" class="side-nav__link"> 
+ <svg class="side-nav__icon">
+              <use xlink href="img/sprite.svg#icon-home"></use>
+            </svg>
+            <span class="side-nav__name ">hotel</span>
+              </a>
+            </li>
+              <li class="side-nav__item side-nav__item--active">
+              <a href="flight.html" class="side-nav__link"> 
+              <svg class="side-nav__icon">
+        <use xlink href="img/sprite.svg#icon-aircraft-take-off"></use>
+      </svg>
+            <span class="side-nav__name">flight</span>
+              </a>
+            </li>
+              <li class="side-nav__item">
+              <a href="cars.html" class="side-nav__link"> 
+ <svg class="side-nav__icon">
+              <use xlink href="img/sprite.svg#icon-key"></use>
+            </svg>
+            <span class="side-nav__name">car rental</span>
+              </a>
+            </li>
+              <li class="side-nav__item">
+              <a href="tours.html" class="side-nav__link"> 
+ <svg class="side-nav__icon">
+              <use xlink href="img/sprite.svg#icon-map"></use>
+            </svg>
+            <span class="side-nav__name">tours</span>
+              </a>
+            </li>
+            <li class="side-nav__item ">
+              <a href="index.html" class="side-nav__link"> 
+ <svg class="side-nav__icon ">
+              <use xlink href="img/sprite.svg#icon-location-pin"></use>
+            </svg>
+            <span class="side-nav__name">home</span>
+              </a>
+            </li>
+          </ul>
+          <div class="legal">&copy; trillo 2022, all rights reserved.</div>
+          </nav>
+          <main class="general-content">
+<section class="flight-header">
+    <div class="flight-header__bookings">
+        book all your flights
+    </div>
+    <div class="flight-header__select">
+        <select 
+       class="flight-header__options">
+       <option class="flight__header--options">
+           select your language
+       </option>
+         <option class="flight__header--options">
+          French
+       </option>
+         <option class="flight__header--options">
+          Swahili
+       </option>
+         <option class="flight__header--options">
+         German
+       </option>
+    </select>
+    </div>
+</section>
+            <!-- end of flight header section -->
+            <section class="flight" style="background-image:linear-gradient(
+     to right bottom,
+     rgba(126, 213, 111, 0.4),
+       rgba(60, 179, 114, 0.8)
+     ), url(./img/flight.jpg) ;  
+">
+            <div class="flight__form">
+<form action="" class="flight__main">
+    <!-- <button class="flight__pay">pay in</button> -->
+   <div class="main-input">
+<div class="main-btn"><button class="flight__pay">pay in</button></div>
+       <select class="flight__main--input">
+      <option class="flight__option flight__main--input">Naira</option>
+ <option class="flight__option flight__main--input">Dollar</option>
+ <option class="flight__option flight__main--input">Euro</option>
+ <option class="flight__option flight__main--input">Ponds</option>
+ <option class="flight__option flight__main--input">Japanese Yuen</option>
+     <option class="flight__option flight__main--input">Shillings</option>
+   </select>
+   </div>
+   <div class="flex">
+        <div class="flight">
+        <div class="flight__div">
+            <select name="from" id="" class="flight__option">
+            <option value="#" class="flight__option">From</option>
+               <option value="#" class="flight__option">Kano</option>
+                  <option value="#" class="flight__option">Abuja</option>
+                     <option value="#" class="flight__option">Owerri</option>
+        </select>
+        </div>
+    <!-- to select -->
+    <button class="flight__return flight__oneway">
+            return &rarr;<span> <button class="flight__oneway ">
+            one way &rarr;
+        </button></span>
+        </button>
+        <div class="flight__date"><input type="date" class="flight__input"></div>
+         <div class="flight__div">
+           <select name="from" id="" class="flight__option">
+            <option value="#" class="flight__option">1 Adult</option>
+               <option value="#" class="flight__option">2 Adults</option>
+                  <option value="#" class="flight__option">3 Adults</option>
+                     <option value="#" class="flight__option">4 Adults</option>
+        </select> 
+      </div>
+      <div class="flight__div">
+           <div class="div">
+           <select name="from" id="" class="flight__option">
+            <option value="#" class="flight__option">0 Anfant</option>
+               <option value="#" class="flight__option">1 Infant</option>
+                  <option value="#" class="flight__option">2 Infants</option>
+                     <option value="#" class="flight__option">3 Infants</option>
+        </select> 
+      </div>  
+    </div>
+    
+    </div>
+    <div class="plane">
+      <div class="flight__div">
+            <select name="from" id="" class="flight__option">
+            <option value="#" class="flight__option">To</option>
+               <option value="#" class="flight__option">Abuja</option>
+                  <option value="#" class="flight__option">Lagos</option>
+                     <option value="#" class="flight__option">Kano</option>
+        </select>
+        </div>
+        <div class="flight__empty">
+            <input type="text" class="flight__empty ">
+        </div>
+        <div class="flight__date"><input type="date" class="flight__input"></div>
+         <div class="flight__div">
+           <div class="div">
+           <select name="from" id="" class="flight__option">
+            <option value="#" class="flight__option">0 Child</option>
+               <option value="#" class="flight__option">1 Child</option>
+                  <option value="#" class="flight__option">2 Children</option>
+                     <option value="#" class="flight__option">3 Children</option>
+        </select> 
+      </div>  
+      <div class="flight__empty">
+          <input type="text" class="flight__empty">
+      </div>
+    </div>
+   </div>
+    <!-- end of fligh -->
+    
+   </div>
+  <div class="flight__checkbox">  <button class="flight__checkbox--cover"><input type="checkbox" class="flight__checkboxes"></button>
+ <div class="flight__checkbox--input">
+      <button class="flight__checkbox--btn">Redeem Air Miles</button>
+  </div>
+  </div>
+  <input type="text" class="flight__checkbox--voucher" placeholder="EVoucher">
+  <div class="flight__last--btn">
+      <button class="flight__last--button">Continue</button>
+  </div>
+</form>
+            </div>
+            </section>
+            <!-- END OF FORM -->
+           <section class="our-destinations">
+                <div class="destinations">
+                <figure class="destinations__photo">
+                    <img src="./img/city.jpg" alt="photo of beautiful city" class="destinations__img">
+                </figure>
+                <article class="destinations__text">
+<h4 class="destinations__heading">
+    our destinations
+</h4>
+<p class="destinations__paragraph">
+    It does not matter if you are flying locally or internationally, at Trillo, we fly you to countries and major cities around africa and the world at very affordable prices.
+</p>
+<p class="destinations__paragraph">
+    Our international destinations include; America, Dubai, London, Germany and France.
+</p>
+                </article>
+            </div>
+            <button class="destinations__btn">
+learn more &rarr;
+            </button>
+           </section>
+           <section class="map">
+               <div class="map-details">
+                   <h6 class="map-details__heading">
+                       powered by google Maps
+                   </h6>
+                   <p class="map-details__text">
+                       have a look at our flight routes
+                   </p>
+               </div>
+              <div class="google-maps">
+                   <div class="mapouter"><div class="gmap_canvas"><iframe width="1008" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=lekki,%20Lagos&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com/divi-discount/">divi discount</a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:1008px;}</style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:1008px;}</style></div></div>
+              </div>
+           </section>
+           <footer class="flight-footer">
+               <ul class="flight-footer__items">
+                   <li class="flight-footer__list">
+                       for more info call <a href="#" class="flight-footer__link">+234 000 111 444</a>
+                   </li>
+                    <li class="flight-footer__list">
+                     <a href="#" class="flight-footer__link">terms and conditions</a>
+                   </li>
+                   <li class="flight-footer__list">
+                     <a href="#" class="flight-footer__link">reviews</a>
+                   </li>
+                    <li class="flight-footer__list">
+                     <a href="#" class="flight-footer__link">faqs</a>
+                   </li>
+               </ul>
+           </footer>
+          </main>
+      </div>
+    </div>
+  </body>
+</html>
