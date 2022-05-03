@@ -45,7 +45,7 @@
   }
   &__main--btn {
     @media screen and (max-width: $bp-smallest) {
-      width: 10%;
+      width: 12%;
     }
   }
   &__pay {
@@ -71,7 +71,7 @@
     outline-color: lightskyblue;
     cursor: pointer;
     @media screen and (max-width: $bp-smallest) {
-      width: 53%;
+      width: 62%;
     }
   }
   &__date {
@@ -141,7 +141,7 @@
   &__checkbox--input {
     width: 100%;
     @media screen and (max-width: $bp-smallest) {
-      width: 52%;
+      width: 63%;
     }
   }
   &__checkbox--btn {
@@ -163,13 +163,13 @@
     outline: none;
     margin: 0.7rem 0 2rem 0;
     @media screen and (max-width: $bp-smallest) {
-      width: 63%;
+      width: 73.5%;
     }
   }
   &__last--btn {
     background: var(--Grey-light-4);
     @media screen and (max-width: $bp-smallest) {
-      width: 63%;
+      width: 73%;
     }
   }
   &__last--button {
@@ -210,7 +210,7 @@
   &__text {
     flex: 0 0 45%;
     @media screen and (max-width: $bp-smallest) {
-      flex: 0 0 1;
+      flex: 0 0 50%;
     }
   }
   &__heading {

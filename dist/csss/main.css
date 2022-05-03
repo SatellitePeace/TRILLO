@@ -2004,7 +2004,7 @@ body {
 
 @media screen and (max-width: 31.25em) {
   .flight__main--btn {
-    width: 10%;
+    width: 12%;
   }
 }
 
@@ -2038,7 +2038,7 @@ body {
 
 @media screen and (max-width: 31.25em) {
   .flight__main--input {
-    width: 53%;
+    width: 62%;
   }
 }
 
@@ -2128,7 +2128,7 @@ body {
 
 @media screen and (max-width: 31.25em) {
   .flight__checkbox--input {
-    width: 52%;
+    width: 63%;
   }
 }
 
@@ -2158,7 +2158,7 @@ body {
 
 @media screen and (max-width: 31.25em) {
   .flight__checkbox--voucher {
-    width: 63%;
+    width: 73.5%;
   }
 }
 
@@ -2168,7 +2168,7 @@ body {
 
 @media screen and (max-width: 31.25em) {
   .flight__last--btn {
-    width: 63%;
+    width: 73%;
   }
 }
 
@@ -2233,8 +2233,8 @@ body {
 @media screen and (max-width: 31.25em) {
   .destinations__text {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 1;
-            flex: 0 0 1;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
   }
 }
 
@@ -2386,9 +2386,9 @@ body {
 
 @media screen and (max-width: 31.25em) {
   .flex {
-    width: 56%;
-    gap: 19rem;
-    padding: 1.5rem;
+    width: 65%;
+    gap: 21rem;
+    padding: 2rem;
   }
 }
 
