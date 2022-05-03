@@ -2044,7 +2044,7 @@ body {
 
 @media screen and (max-width: 31.25em) {
   .flight__date {
-    width: 90%;
+    width: 100%;
   }
 }
 
