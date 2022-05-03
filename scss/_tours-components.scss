@@ -77,10 +77,11 @@
   border-radius: 2rem;
   @media screen and (max-width: $bp-average) {
     flex-direction: column;
-
     gap: 4rem;
   }
-
+  @media screen and (max-width: $bp-smallest) {
+    margin-bottom: 6rem;
+  }
   &__general {
     height: 55rem;
     width: 30rem;
