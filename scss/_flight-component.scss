@@ -46,8 +46,6 @@
   &__main--btn {
     @media screen and (max-width: $bp-smallest) {
       width: 10%;
-      // width: 50%;
-      margin-right: -2px;
     }
   }
   &__pay {
@@ -211,6 +209,9 @@
   }
   &__text {
     flex: 0 0 45%;
+    @media screen and (max-width: $bp-smallest) {
+      flex: 0 0 1;
+    }
   }
   &__heading {
     font-size: var(--font-size-big);

@@ -7,7 +7,9 @@
   background: rgba(255, 255, 255, 0.6);
   margin-bottom: 0.5rem;
   @media screen and (max-width: $bp-smallest) {
-    width: 50%;
+    width: 56%;
+    gap: 19rem;
+    padding: 1.5rem;
   }
 }
 // for the first input spanning the whole form
