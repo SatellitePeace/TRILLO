@@ -2050,6 +2050,12 @@ body {
   background: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (max-width: 37.5em) {
+  .flight__main--div {
+    margin-right: 1.5rem;
+  }
+}
+
 .flight__input, .flight__date, .flight__oneway, .flight__main--form, .flight__box--form {
   width: 100%;
 }

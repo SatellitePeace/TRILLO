@@ -83,6 +83,9 @@
     max-width: 77%;
     padding: 3rem;
     background: rgba(255, 255, 255, 0.6);
+    @media screen and (max-width: $bp-small) {
+      margin-right: 1.5rem;
+    }
   }
   &__input,
   &__date,
