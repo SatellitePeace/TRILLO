@@ -226,6 +226,9 @@
   @media screen and (max-width: $bp-medium) {
     display: flex;
     margin-top: 0;
+    position: -webkit-sticky;
+    width: 100%;
+    top: 0;
   }
 
   &__item {
