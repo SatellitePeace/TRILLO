@@ -76,12 +76,11 @@
     }
   }
   &__main--div {
-    padding: 1rem;
     margin-top: 2rem;
     display: flex;
     gap: 5rem;
     max-width: 77%;
-    padding: 3rem;
+    padding: 3.3rem;
     background: rgba(255, 255, 255, 0.6);
   }
   &__input,
@@ -92,7 +91,9 @@
     width: 100%;
   }
   &__div--two {
-    margin-left: 2.5rem;
+    @media screen and (max-width: $bp-small) {
+      margin-left: 3.3rem;
+    }
   }
   &__input--form {
     width: 100%;
