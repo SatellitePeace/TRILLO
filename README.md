@@ -8,7 +8,7 @@ Trillo was built from start to finish using
 # Css flexbox
 # Html
 and
-#Scss (sassy scss) technologies.
+# Scss (sassy scss) technologies.
 The project also made use of  extensive  css animations and transformations to give the design an edge.
 
 ###### Classes and selectors were bult using BEM (Block Element Model)
