@@ -21,7 +21,7 @@
   --font-size-big: 5rem;
   --line: 1px solid var(--Grey-light-3);
   --marginbig: 3rem;
-  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.255);
 }
 
 * {
@@ -2184,8 +2184,14 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 0.7rem;
-  -webkit-box-shadow: var(--shadow-dark);
-          box-shadow: var(--shadow-dark);
+  -webkit-box-shadow: var(--shadow-light);
+          box-shadow: var(--shadow-light);
+}
+
+@media screen and (max-width: 31.25em) {
+  .destinations__img {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .destinations__text {
@@ -2213,6 +2219,12 @@ body {
 @media screen and (max-width: 37.5em) {
   .destinations__heading {
     font-size: 1.3;
+  }
+}
+
+@media screen and (max-width: 31.25em) {
+  .destinations__heading {
+    font-size: 1.2;
   }
 }
 
