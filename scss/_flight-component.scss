@@ -239,6 +239,10 @@
     &:hover {
       background: var(--Primary-dark);
     }
+    @media screen and (max-width: $bp-small) {
+      margin-top: 0;
+      margin-left: 5rem;
+    }
   }
 }
 // MAP SECTION

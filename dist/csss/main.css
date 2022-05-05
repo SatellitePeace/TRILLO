@@ -2256,6 +2256,13 @@ body {
   background: var(--Primary-dark);
 }
 
+@media screen and (max-width: 37.5em) {
+  .destinations__btn {
+    margin-top: 0;
+    margin-left: 5rem;
+  }
+}
+
 .map-details {
   display: -webkit-box;
   display: -ms-flexbox;
