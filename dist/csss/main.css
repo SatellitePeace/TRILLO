@@ -12,6 +12,7 @@
   --primaryColor: #55c57a;
   --primaryLight: #7ed56f;
   --primaryDark: #28b485;
+  --blue: lightskyblue;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.5);
   --margin: 2rem;
   --font-weight: 100;
@@ -946,7 +947,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  z-index: 100;
+  z-index: 10;
 }
 
 .sidebar {
@@ -971,8 +972,8 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 10;
     background: black;
+    z-index: 2;
     -webkit-box-shadow: var(--shadow-light);
             box-shadow: var(--shadow-light);
   }
@@ -1964,7 +1965,7 @@ body {
 
 .flight-header__options {
   padding: 1.5rem 2rem;
-  font-size: var(--font-size-small);
+  font-size: var(--font-size);
   text-transform: capitalize;
   background: var(--Grey-light-3);
   color: var(--primaryDark);
@@ -1977,204 +1978,161 @@ body {
   .flight-header__options {
     padding: 1rem 1rem;
     font-size: 1.2rem;
+    font-size: var(--font-size-small);
   }
 }
 
+.plane {
+  background: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  max-width: 45rem;
+  padding: 1.5rem;
+}
+
 .flight {
+  padding: 1rem;
   background-position: center;
   background-size: cover;
 }
 
-.flight .plane {
-  max-width: 45rem;
-  margin-left: -20rem;
+.flight__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.flight__main {
-  max-width: 50rem;
+.flight__main--btn {
+  padding: 0.8rem 0;
+  width: 40%;
+  text-transform: capitalize;
+  font-size: var(--font-size-small);
+  background: var(--Grey-light-4);
+  border: none;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.flight__main--input {
+  padding: 0.8rem 4.5rem;
+  width: 100%;
+  border: none;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  outline-color: var(--blue);
+  margin-left: -60%;
+}
+
+.flight__date--input {
+  cursor: pointer;
+  outline-color: var(--blue);
+}
+
+.flight__main--option, .flight__input--option {
+  background: var(--blue);
+  font-size: var(--font-size);
+}
+
+@media screen and (max-width: 37.5em) {
+  .flight__main--option, .flight__input--option {
+    font-size: var(--font-size-small);
+  }
+}
+
+.flight__main--div {
+  padding: 1rem;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5rem;
+  max-width: 77%;
   padding: 3rem;
   background: rgba(255, 255, 255, 0.6);
 }
 
-@media screen and (max-width: 37.5em) {
-  .flight__main {
-    background: transparent;
-  }
-}
-
-@media screen and (max-width: 31.25em) {
-  .flight__main--btn {
-    width: 12%;
-  }
-}
-
-.flight__pay {
-  border: none;
-  padding: 1rem 2rem;
-  text-transform: capitalize;
-  font-size: var(--font-size-small);
-  background: var(--Grey-light-4);
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
-}
-
-@media screen and (max-width: 31.25em) {
-  .flight__pay {
-    padding: 0.2rem 1rem;
-  }
-}
-
-.flight__main--input {
-  width: 80%;
-  padding: 1.05rem 0;
-  margin-bottom: 2.5rem;
-  margin-right: auto;
-  border: none;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
-  outline-color: lightskyblue;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 31.25em) {
-  .flight__main--input {
-    width: 62%;
-  }
-}
-
-@media screen and (max-width: 31.25em) {
-  .flight__date {
-    width: 100%;
-  }
-}
-
-.flight__input {
-  padding: 0.7rem 0;
-  border-radius: 5px;
-  border: 1px solid var(--Grey-dark-3);
-  background: var(--white);
-  margin: 1rem 0;
-  cursor: pointer;
-}
-
-.flight__option {
+.flight__input, .flight__date, .flight__oneway, .flight__main--form, .flight__box--form {
   width: 100%;
-  padding: 0.7rem 0;
-  border-radius: 5px;
-  margin: 0.2rem 0;
-  border: 1px solid var(--Grey-dark-3);
+}
+
+.flight__input--form {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
   cursor: pointer;
 }
 
-@media screen and (max-width: 31.25em) {
-  .flight__option {
-    width: 10rem;
-  }
-}
-
-.flight__oneway {
-  border: none;
-  padding: 1rem 0.6rem;
-  background: var(--white);
-  text-transform: capitalize;
-  margin-top: 1rem;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
+.flight__oneway--one, .flight__return--one {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
   cursor: pointer;
 }
 
-.flight__return {
-  background: var(--white);
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
-  background: var(--Grey-light-4);
+.flight__date--input {
+  width: 100%;
+  padding: 0.8rem 0;
+  margin: 0.5rem 0;
 }
 
-.flight__empty {
-  padding: 0.7rem 5rem;
-  display: none;
+.flight__date--input {
+  width: 100%;
+  padding: 0.8rem 0;
+  margin: 0.5rem 0;
 }
 
 .flight__checkbox {
+  cursor: pointer;
+}
+
+.flight__box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.flight__checkboxes {
-  cursor: pointer;
-}
-
-.flight__checkbox--cover {
-  border: 1px solid var(--Grey-dark-2);
-  padding: 0.71rem 0;
-  width: 10%;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
-  background: var(--Grey-light-4);
-  cursor: pointer;
-}
-
-.flight__checkbox--input {
-  width: 100%;
-}
-
-@media screen and (max-width: 31.25em) {
-  .flight__checkbox--input {
-    width: 63%;
-  }
+  width: 90%;
+  margin: 0.8rem 0;
 }
 
 .flight__checkbox--btn {
   padding: 0.8rem 0;
+  width: 10%;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  background: var(--Grey-light-4);
+  border: none;
+}
+
+.flight__box--btn {
   width: 100%;
   border: none;
+  padding: 0.8rem 0;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   background: var(--Grey-light-4);
-}
-
-@media screen and (max-width: 31.25em) {
-  .flight__checkbox--btn {
-    width: 100%;
-  }
-}
-
-.flight__checkbox--voucher {
-  padding: 0.8rem 0;
-  width: 100%;
   border: none;
+}
+
+.flight__last--form {
+  width: 90%;
+}
+
+.flight__last--input {
+  width: 100%;
+  padding: 1rem 0;
   border-radius: 5px;
-  outline: none;
-  margin: 0.7rem 0 2rem 0;
-}
-
-@media screen and (max-width: 31.25em) {
-  .flight__checkbox--voucher {
-    width: 73.5%;
-  }
-}
-
-.flight__last--btn {
-  background: var(--Grey-light-4);
-}
-
-@media screen and (max-width: 31.25em) {
-  .flight__last--btn {
-    width: 73%;
-  }
+  border: none;
+  outline-color: var(--blue);
 }
 
 .flight__last--button {
+  width: 85%;
+  background: var(--Grey-light-4);
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.flight__last--btn {
   border: none;
-  padding: 1rem 2.5rem;
+  padding: 1rem 2rem;
   margin: 2rem 1rem;
   font-size: var(--font-size-small);
   background: black;
@@ -2183,9 +2141,10 @@ body {
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  padding: 1rem 2.5rem;
 }
 
-.flight__last--button:hover {
+.flight__last--btn:hover {
   background: rgba(0, 0, 0, 0.8);
 }
 

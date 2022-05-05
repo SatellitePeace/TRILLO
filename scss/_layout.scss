@@ -26,7 +26,7 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  z-index: 100;
+  z-index: 10;
 }
 .sidebar {
   background: var(--Grey-dark-1);
@@ -38,8 +38,8 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 10;
     background: black;
+    z-index: 2;
     box-shadow: var(--shadow-light);
   }
 }
