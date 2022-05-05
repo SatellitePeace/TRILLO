@@ -1,0 +1,298 @@
+// FLIGHT HEADER SECTION
+.flight-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  &__bookings {
+    font-size: var(--font-size);
+    text-transform: uppercase;
+    color: var(--primaryDark);
+    @media screen and (max-width: $bp-small) {
+      font-size: var(--font-size-small);
+    }
+  }
+  &__options {
+    padding: 1.5rem 2rem;
+    font-size: var(--font-size);
+    text-transform: capitalize;
+    background: var(--Grey-light-3);
+    color: var(--primaryDark);
+    cursor: pointer;
+    border: none;
+    outline: 1px solid var(--primaryDark);
+    @media screen and (max-width: $bp-small) {
+      padding: 1rem 1rem;
+      font-size: 1.2rem;
+      font-size: var(--font-size-small);
+    }
+  }
+}
+// FORM BOOKING SCETION
+.plane {
+  background: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  max-width: 45rem;
+  padding: 1.5rem;
+}
+
+.flight {
+  padding: 1rem;
+  background-position: center;
+  background-size: cover;
+
+  &__div {
+    display: flex;
+  }
+  &__main--btn {
+    padding: 0.8rem 0;
+    width: 40%;
+    text-transform: capitalize;
+    font-size: var(--font-size-small);
+    background: var(--Grey-light-4);
+    border: none;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  &__main--input {
+    padding: 0.8rem 4.5rem;
+    width: 100%;
+    border: none;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    outline-color: var(--blue);
+    margin-left: -60%;
+  }
+  &__date--input {
+    cursor: pointer;
+    outline-color: var(--blue);
+  }
+  &__main--option,
+  &__input--option {
+    background: var(--blue);
+    font-size: var(--font-size);
+    @media screen and (max-width: $bp-small) {
+      font-size: var(--font-size-small);
+    }
+  }
+  &__main--div {
+    padding: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    gap: 5rem;
+    max-width: 77%;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.6);
+    @media screen and (max-width: $bp-small) {
+      margin-right: 1.5rem;
+    }
+  }
+  &__input,
+  &__date,
+  &__oneway,
+  &__main--form,
+  &__box--form {
+    width: 100%;
+  }
+  &__input--form {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0;
+    cursor: pointer;
+  }
+  &__oneway--one,
+  &__return--one {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0;
+    cursor: pointer;
+  }
+  &__date--input {
+    width: 100%;
+    padding: 0.8rem 0;
+    margin: 0.5rem 0;
+  }
+  &__date--input {
+    width: 100%;
+    padding: 0.8rem 0;
+    margin: 0.5rem 0;
+  }
+  &__checkbox {
+    cursor: pointer;
+  }
+  &__box {
+    display: flex;
+    width: 90%;
+    margin: 0.8rem 0;
+  }
+  &__checkbox--btn {
+    padding: 0.8rem 0;
+    width: 10%;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background: var(--Grey-light-4);
+    border: none;
+  }
+  &__box--btn {
+    width: 100%;
+    border: none;
+    padding: 0.8rem 0;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background: var(--Grey-light-4);
+    border: none;
+  }
+  &__last--form {
+    width: 90%;
+  }
+  &__last--input {
+    width: 100%;
+    padding: 1rem 0;
+    border-radius: 5px;
+    border: none;
+    outline-color: var(--blue);
+  }
+  &__last--button {
+    width: 85%;
+    background: var(--Grey-light-4);
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+  &__last--btn {
+    border: none;
+    padding: 1rem 2rem;
+    margin: 2rem 1rem;
+    font-size: var(--font-size-small);
+    background: black;
+    color: var(--white);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 1rem 2.5rem;
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+}
+// // DESTINATION SECTION
+.destinations {
+  display: flex;
+  gap: 5rem;
+  margin: var(--margin);
+  padding: 5rem;
+  @media screen and (max-width: $bp-average) {
+    flex-direction: column;
+  }
+  &__photo {
+    flex: 0 0 1;
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    height: 35rem;
+    object-fit: cover;
+    border-radius: 0.7rem;
+    box-shadow: var(--shadow-dark);
+  }
+  &__text {
+    flex: 0 0 45%;
+    @media screen and (max-width: $bp-smallest) {
+      flex: 0 0 50%;
+    }
+  }
+  &__heading {
+    font-size: var(--font-size-big);
+    font-weight: var(--font-weight);
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+    color: var(--Grey-dark-1);
+    @media screen and (max-width: $bp-small) {
+      font-size: 1.3;
+    }
+  }
+  &__paragraph {
+    font-size: var(--font-size);
+    line-height: 3rem;
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__btn {
+    text-align: center;
+    font-size: var(--font-size);
+    background: transparent;
+    text-transform: capitalize;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 7rem;
+    border-bottom: 2px solid var(--Primary-dark);
+    transition: 0.3s;
+    &:hover {
+      background: var(--Primary-dark);
+    }
+  }
+}
+// MAP SECTION
+.map-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background: blue;
+  text-transform: uppercase;
+  word-spacing: 0.5rem;
+  @media screen and (max-width: $bp-small) {
+    padding: 1rem;
+  }
+  &__heading {
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    color: var(--white);
+    @media screen and (max-width: $bp-average) {
+      font-size: var(--font-size-small);
+    }
+  }
+  &__text {
+    font-size: var(--font-size);
+    color: var(--white);
+    @media screen and (max-width: $bp-average) {
+      font-size: var(--font-size-small);
+    }
+  }
+}
+// FOOTER SECTION
+.flight-footer {
+  background: rgb(69, 69, 233);
+  padding: 4rem;
+  margin-top: -6.69rem;
+  @media screen and (max-width: $bp-average) {
+    margin-top: -2rem;
+  }
+
+  &__items {
+    text-align: center;
+  }
+  &__list {
+    color: var(--white);
+    text-transform: uppercase;
+    list-style: none;
+    font-size: var(--font-size);
+    padding: 1rem;
+    @media screen and (max-width: $bp-average) {
+      font-size: var(--font-size-small);
+    }
+  }
+  &__link {
+    color: var(--white);
+    font-size: var(--font-size);
+    transition: 0.3s;
+    &:hover {
+      color: var(--primaryDark);
+    }
+    @media screen and (max-width: $bp-average) {
+      font-size: var(--font-size-small);
+    }
+  }
+}

@@ -1,0 +1,89 @@
+.container {
+  background: var(--Grey-light-1);
+  max-width: 90vw;
+  margin: 8rem auto;
+  overflow: hidden;
+  box-shadow: var(--shadow-dark);
+  @media screen and (max-width: $bp-large) {
+    margin: 0 0 0 0;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.content {
+  background: var(--Grey-light-2);
+  display: flex;
+  overflow: hidden;
+  @media screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
+}
+.header {
+  height: 8rem;
+  background: var(--white);
+  border-bottom: 3px solid var(--Grey-light-3);
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+.sidebar {
+  background: var(--Grey-dark-1);
+  display: flex;
+  flex: 0 0 18%;
+  flex-direction: column;
+  justify-content: space-between;
+  @media screen and (max-width: $bp-medium) {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    z-index: 2;
+    box-shadow: var(--shadow-light);
+  }
+}
+.hotel-view {
+  background: var(--Grey-light-4);
+  // height: 100%;
+  flex: 1;
+  .details {
+    display: flex;
+    margin: 3.5rem;
+    @media screen and (max-width: $bp-medium) {
+      margin: 2rem;
+      flex-direction: column;
+    }
+  }
+}
+
+.description {
+  flex: 0 0 60%;
+  padding: 3rem;
+  background: var(--white);
+  margin-right: 3.5rem;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+  @media screen and (max-width: $bp-medium) {
+    margin-right: 2rem;
+    padding: 2rem;
+    margin-right: 0;
+  }
+}
+.user-reviews {
+  flex: 1;
+  @media screen and (max-width: $bp-medium) {
+    margin-top: 3rem;
+  }
+}
+.footer {
+  border-top: 3px solid var(--Grey-dark-3);
+  background: #fff;
+  padding: 4.5rem;
+  text-align: center;
+  @media screen and (max-width: $bp-medium) {
+    padding: 3rem;
+  }
+}

@@ -1,0 +1,581 @@
+// note the scss codes for the drop down menu where written in this file
+// this is also the file where most global style like the header are
+
+.logo {
+  height: 7rem;
+  margin-left: 2rem;
+  align-self: center;
+  object-fit: cover;
+  @media screen and (max-width: $bp-smallest) {
+    display: none;
+  }
+}
+
+.search {
+  font-size: inherit;
+  font-weight: inherit;
+  display: flex;
+  align-items: center;
+  flex: 0 0 30%;
+  @media screen and (max-width: $bp-smallest) {
+    margin: 2rem;
+  }
+  &__input {
+    display: flex;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 10rem;
+    background: var(--Grey-light-2);
+    outline: none;
+    width: 85%;
+    &:focus {
+      width: 95%;
+    }
+
+    &::placeholder {
+      font-size: 1rem;
+      color: var(--Grey-dark-3);
+    }
+  }
+  &__button {
+    border: none;
+    margin: -3.5rem;
+    background: var(--Grey-light-2);
+    cursor: pointer;
+    outline: none;
+
+    &:focus {
+      transform: translateY(0.2rem);
+    }
+  }
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--Grey-dark-3);
+    outline: none;
+  }
+}
+.user-nav {
+  display: flex;
+  margin: 2rem;
+  cursor: pointer;
+  fill: currentColor;
+
+  &__icon-box {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__icon {
+    height: 4rem;
+    width: 4rem;
+    color: var(--Grey-dark-3);
+    margin: 1rem;
+    @media screen and (max-width: $bp-small) {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+  &__notification {
+    position: absolute;
+    color: var(--white);
+    background: var(--color-primary);
+    border-radius: 50%;
+    top: 0.5rem;
+    left: 2rem;
+    padding: 0.5rem;
+    @media screen and (max-width: $bp-small) {
+      padding: 0.1rem;
+    }
+  }
+  &__notification2 {
+    position: absolute;
+    color: var(--white);
+    background: var(--color-primary);
+    border-radius: 50%;
+    top: 0.5rem;
+    right: 0.4rem;
+    padding: 0.5rem;
+    @media screen and (max-width: $bp-small) {
+      padding: 0.125rem;
+    }
+  }
+  &__user {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: $bp-smallest) {
+      margin: 2.5rem;
+    }
+  }
+  &__signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    &--text {
+      font-size: var(--font-size);
+      text-transform: capitalize;
+      text-decoration: none;
+      border-radius: 1rem;
+      background: var(--Primary-dark);
+      color: var(--white);
+      transition: 0.3s;
+      padding: 1rem;
+      &:hover {
+        background: var(--color-primary);
+      }
+      @media screen and (max-width: $bp-smallest) {
+        font-size: 1rem;
+      }
+    }
+  }
+  &__user-photo {
+    height: 5rem;
+    border: none;
+    border-radius: 50%;
+    margin: 0.7rem;
+    @media screen and (max-width: $bp-smallest) {
+      height: 3.5rem;
+    }
+  }
+
+  &__user-name {
+    font-size: var(--font-size);
+    @media screen and (max-width: $bp-smallest) {
+      font-size: var(--font-size-small);
+    }
+  }
+}
+.user {
+  position: relative;
+  transition: 2s;
+  &__dropdown {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 4.5rem;
+    right: 4.5rem;
+    z-index: 1000;
+    display: none;
+    max-width: 35rem;
+    box-shadow: var(--shadow-light);
+  }
+  &:hover &__dropdown {
+    display: block;
+  }
+  &__dropdowns {
+    width: 23rem;
+  }
+  &__dropdown--list {
+    background: var(--Grey-light-3);
+    padding: 3rem 7rem;
+    border-radius: 0.5rem;
+    // width: 100%;
+  }
+  &__dropdown--item {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+  &__dropdown--items {
+    font-size: var(--font-size-small);
+    color: var(--Grey-dark-1);
+    padding: 0;
+    width: 15rem;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      background: var(--color-primary);
+      padding: 0.5rem;
+    }
+  }
+  &__dropdown--link {
+    text-decoration: none;
+    font-size: var(--font-size-small);
+    color: var(--Primary-dark);
+    display: flex;
+    gap: 1rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid currentColor;
+    padding: 0.7rem;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__dropdown--photo {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    margin-right: 2rem;
+    object-fit: cover;
+  }
+}
+
+// ///////============================================NAVIGATION SIDEBAR
+.side-nav {
+  margin-top: 3.5rem;
+  font-size: 1.4rem;
+  @media screen and (max-width: $bp-medium) {
+    display: flex;
+    margin-top: 0;
+  }
+
+  &__item {
+    text-transform: uppercase;
+    list-style: none;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 0.7rem;
+      @media screen and (max-width: $bp-medium) {
+        margin-bottom: 0;
+      }
+    }
+    @media screen and (max-width: $bp-medium) {
+      flex: 1;
+    }
+  }
+
+  &__item::before {
+    content: "";
+    width: 3px;
+    align-self: center;
+    height: 100%;
+    position: absolute;
+    background: var(--Primary-dark);
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.3s cubic-bezier(1, 0, 0, 1) 0.2s,
+      background-color 0.2s;
+  }
+  &__item:hover::before,
+  &__item--active::before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+  &__item:active::before {
+    background: var(--color-primary);
+    width: 100%;
+  }
+
+  &__link,
+  &:visited {
+    text-decoration: none;
+    padding: 1.5rem 0.5rem;
+    display: block;
+    color: var(--Grey-light-4);
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    @media screen and (max-width: $bp-small) {
+      flex-direction: column;
+      font-size: 1rem;
+      padding: 1rem;
+    }
+  }
+
+  &__icon {
+    height: 2.5rem;
+    width: 3rem;
+    fill: currentColor;
+    margin-left: 2.5rem;
+    margin-right: 1rem;
+    @media screen and (max-width: $bp-small) {
+      height: 1.5rem;
+      width: 1.5rem;
+      margin: 0.3rem 0;
+    }
+  }
+}
+.legal {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  color: var(--Grey-light-2);
+  margin: 4rem;
+  text-align: center;
+  line-height: 1.7rem;
+  word-spacing: 5px;
+
+  @media screen and (max-width: $bp-medium) {
+    display: none;
+  }
+}
+.gallery {
+  display: flex;
+
+  &__photo {
+    display: block;
+    width: 100%;
+  }
+}
+// ///////////////////////////================================HOTEL OVERVIEW==============////////
+.overview {
+  background: var(--white);
+  border-bottom: 2px solid var(--Grey-dark-3);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  &__heading {
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    @media screen and (max-width: $bp-small) {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__stars {
+    margin-right: auto;
+    padding-left: 2rem;
+    @media screen and (max-width: $bp-small) {
+      padding-left: 1.5rem;
+    }
+  }
+  &__icon-star,
+  &__location-icon {
+    height: 1.7rem;
+    width: 1.7rem;
+    fill: var(--color-primary);
+    @media screen and (max-width: $bp-small) {
+      height: 1.3rem;
+      width: 1.3rem;
+    }
+  }
+  &__location {
+    display: flex;
+    align-items: center;
+  }
+
+  &__rating {
+    background: var(--color-primary);
+    padding: 1rem;
+    @media screen and (max-width: $bp-small) {
+      padding: 0.5rem;
+    }
+  }
+  &__rating-average {
+    font-size: 2rem;
+    @media screen and (max-width: $bp-small) {
+      font-size: 1.5rem;
+    }
+  }
+  &__rating-count {
+    font-size: 1rem;
+    @media screen and (max-width: $bp-small) {
+      font-size: 0.8rem;
+    }
+  }
+}
+// OVERVIEW BTN
+.btn-inline {
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  background: transparent;
+  cursor: pointer;
+  display: inline-block;
+  border-bottom: 1.85px solid currentcolor;
+  margin-right: 1rem;
+  transition: all 0.2s;
+  animation: pulsate;
+  &:focus {
+    outline: none;
+    animation: pulsate 1.3s infinite;
+  }
+  & span {
+    margin-left: 2px;
+    transition: all 0.2s;
+  }
+  &:hover span {
+    margin-left: 5px;
+  }
+  &:hover {
+    color: var(--Primary-dark);
+  }
+}
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+// ===================decription details
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  list-style: none;
+  line-height: 1.3rem;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  &__item {
+    list-style: none;
+    flex: 0 0 50%;
+    margin: 1.5rem 0;
+  }
+  &__item::before {
+    content: "";
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    background: var(--color-primary);
+  }
+}
+
+.paragraph {
+  margin-bottom: 3rem;
+}
+
+.recommendation {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  &__people {
+    margin-right: auto;
+  }
+  &__photos {
+    height: 4rem;
+    width: 4rem;
+    border: 3px solid var(--white);
+    border-radius: 50%;
+    margin-right: -2rem;
+  }
+  &__freinds {
+    display: flex;
+  }
+  &__count {
+    flex: 0 0 40%;
+  }
+}
+// ======================REVIEWS SECTION===================
+.review {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  word-spacing: 0.5rem;
+  padding: 3rem;
+  background: var(--white);
+  margin-bottom: 4.5rem;
+  position: relative;
+  @media screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-bottom: 2.25rem;
+  }
+  &__text {
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 10;
+  }
+  &__photo {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+  }
+  &__user-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    word-spacing: 1px;
+  }
+  &__name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    @media screen and (max-width: $bp-medium) {
+      font-size: 1.2rem;
+    }
+  }
+  &__date {
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: var(--Grey-dark-3);
+    @media screen and (max-width: $bp-medium) {
+      font-size: 1.2rem;
+    }
+  }
+  &__rating {
+    font-size: 2rem;
+    color: var(--color-primary);
+    @media screen and (max-width: $bp-medium) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &::before {
+    content: "\201C";
+    position: absolute;
+    top: 5.5rem;
+    left: 1rem;
+    font-size: 15rem;
+    color: var(--Grey-light-4);
+    z-index: 1;
+  }
+}
+// ///USERS REVIEW
+
+// FOOTER==================
+.footer__text {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  text-transform: uppercase;
+  @media screen and (max-width: $bp-medium) {
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+  }
+}
+// //===============BUTTON FR FOOTER
+.btn {
+  border: none;
+  padding: 2rem 7rem;
+  text-transform: uppercase;
+  color: var(--white);
+  background-image: linear-gradient(#eb2f64, #c41647);
+  border-radius: 10rem;
+  margin-top: 2rem;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+
+  &__visible {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s;
+  }
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+  &__invisible {
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s;
+    display: inline-block;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-image: linear-gradient(#c41647, #eb2f64);
+  }
+  &:hover &__invisible {
+    top: 0;
+    padding: 2rem 0;
+  }
+}

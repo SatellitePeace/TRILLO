@@ -1,0 +1,40 @@
+.flex {
+  display: flex;
+  gap: 22rem;
+  display: flex;
+  max-width: 45rem;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.5rem;
+  @media screen and (max-width: $bp-smallest) {
+    width: 65%;
+    gap: 21rem;
+    padding: 2rem;
+  }
+}
+// for the first input spanning the whole form
+.main-input {
+  display: flex;
+}
+// DESTINATIONS SECTION
+.our-destinations {
+  background: var(--Grey-light-3);
+}
+// MAPS SECTION
+.map {
+  width: 100%;
+  display: block;
+}
+.google-maps {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  //   height: 0;
+}
+.google-maps .mapouter {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}

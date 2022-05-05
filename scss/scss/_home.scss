@@ -1,0 +1,29 @@
+.body {
+  display: flex;
+  background: var(--Grey-light-2);
+
+  @media screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
+}
+.home-overview {
+  flex: 1;
+}
+.about-ratings {
+  display: flex;
+  margin: var(--margin);
+  @media screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
+}
+// FREQUENTLY ASKED QUESTIONS
+.FAQ {
+  background: var(--white);
+  margin: 2rem;
+}
+// FOOTER
+.homefooter {
+  margin: 0;
+  background: var(--Grey-light-4);
+  padding: 3rem 5rem;
+}

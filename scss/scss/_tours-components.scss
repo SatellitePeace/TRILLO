@@ -1,0 +1,244 @@
+.tours {
+  margin: var(--marginbig);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2.5rem;
+  &__heading {
+    font-size: 5rem;
+    font-weight: var(--font-weight);
+    text-transform: uppercase;
+    background-image: linear-gradient(to right bottom, #28b485, #55c57a);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  &__subheading {
+    font-size: 2.5rem;
+    font-weight: var(--font-weight);
+    text-transform: capitalize;
+    color: var(--Grey-dark-1);
+  }
+}
+// TOURS DESCRIPTION/ABOUT TRILLLO TOURS
+.tours-description {
+  margin: var(--marginbig);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2.5rem;
+
+  &__text {
+    font-size: var(--font-size-small);
+    line-height: 2.3rem;
+    word-spacing: 4px;
+    color: var(--Grey-dark-1);
+    margin-bottom: 2rem;
+  }
+  &__rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size);
+    color: var(--primaryDark);
+    text-transform: uppercase;
+  }
+  &__name {
+    font-size: var(--font-size);
+    color: var(--primaryDark);
+    margin-right: auto;
+  }
+  &__stars {
+    display: flex;
+    margin-right: auto;
+  }
+  &__list {
+    list-style: none;
+  }
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--primaryDark);
+  }
+}
+// TOURSIDT SECTION WITH HEADING FOR CARDS
+.tourists {
+  text-align: center;
+  &__heading {
+    font-size: 4rem;
+    padding: 5rem;
+    font-weight: var(--font-weight);
+    color: var(--white);
+    text-transform: uppercase;
+  }
+}
+
+.tour-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  border-radius: 2rem;
+  @media screen and (max-width: $bp-average) {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  @media screen and (max-width: $bp-smallest) {
+    margin-bottom: 6rem;
+  }
+  &__general {
+    height: 55rem;
+    width: 30rem;
+    background: var(--white);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    box-shadow: 1.5rem 2rem 3rem 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  &__orange {
+    height: 20rem;
+    background-image: linear-gradient(
+      to right bottom,
+      rgb(255, 166, 0),
+      #ff4500
+    );
+    & > img {
+      mix-blend-mode: multiply;
+      filter: opacity(0.75);
+    }
+  }
+  &__green {
+    height: 20rem;
+    background-image: linear-gradient(
+      to right bottom,
+      rgb(102, 224, 102),
+      hsl(120, 49%, 47%)
+    );
+    & > img {
+      mix-blend-mode: multiply;
+      filter: opacity(0.6) brightness(80%);
+    }
+  }
+  &__blue {
+    height: 20rem;
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(41, 152, 255, 0.5),
+      rgba(86, 67, 250, 0.5)
+    );
+    & > img {
+      mix-blend-mode: multiply;
+    }
+  }
+
+  &__heading {
+    text-align: right;
+    text-transform: capitalize;
+    font-size: var(--font-size);
+    padding: 1.5rem;
+  }
+  &__heading--orange {
+    background-image: linear-gradient(to left bottom, orange, orangered);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  &__orange--text {
+    padding: 2rem;
+    margin-top: 5rem;
+  }
+  &__orange--list {
+    list-style: none;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  &__orange--item {
+    text-transform: capitalize;
+    margin-bottom: var(--margin);
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--Grey-dark-1);
+      padding-bottom: 0.5rem;
+    }
+  }
+  &__footer--orange {
+    background: linear-gradient(to right bottom, orange, orangered);
+  }
+  &__heading--green {
+    background-image: linear-gradient(to left bottom, green, darkgreen);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  &__footer--green {
+    background: linear-gradient(to right bottom, #28b485, green);
+  }
+  &__heading--blue {
+    background-image: linear-gradient(to left bottom, blue, darkblue);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  &__footer--blue {
+    background: linear-gradient(to right bottom, blue, darkblue);
+  }
+  &__footer {
+    padding: 2rem;
+    font-size: var(--font-size);
+  }
+  &__footer--list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__footer--item {
+    text-transform: uppercase;
+    color: var(--white);
+  }
+}
+// TOURS BOOKING FORM
+.booking-form {
+  margin: var(--marginbig);
+  padding: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: $bp-average) {
+    flex-direction: column;
+  }
+  &__label {
+    font-size: 1.4rem;
+    text-transform: capitalize;
+  }
+  &__input {
+    display: flex;
+    flex: 0 0 50%;
+    height: 2.8rem;
+    width: 20rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    border: none;
+    outline-color: var(--primaryDark);
+    background: var(--primaryDark);
+    &:focus {
+      background: var(--white);
+    }
+    &::placeholder {
+      color: #000;
+    }
+  }
+  &__option {
+    color: var(--white);
+  }
+  &__submit {
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    padding: 1rem 8rem;
+    background: var(--primaryDark);
+    color: var(--white);
+    font-size: var(--font-size);
+    text-transform: uppercase;
+    display: flex;
+    margin: 0 auto 4rem auto;
+    &:hover {
+      color: var(--white);
+      background: var(--primaryColor);
+    }
+  }
+}

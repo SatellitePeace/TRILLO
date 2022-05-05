@@ -1,0 +1,148 @@
+// INTRODUCTORY SECTION OF TRILLO
+.homepage {
+  text-align: center;
+  background: var(--white);
+  padding: 2rem;
+  margin: var(--margin);
+  &__heading {
+    font-size: 5rem;
+    font-weight: 100;
+    color: var(--Primary-dark);
+  }
+  &__subheading {
+    font-size: var(--font-size);
+    font-weight: 100;
+    text-transform: capitalize;
+    margin-top: 1rem;
+    line-height: 2.7rem;
+  }
+}
+// ABOUT SECTION
+.about {
+  background: var(--white);
+  margin-right: 4rem;
+  @media screen and (max-width: $bp-small) {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  &__heading {
+    font-size: 3rem;
+    font-weight: var(--font-weight);
+    text-transform: capitalize;
+    color: var(--Primary-dark);
+    padding: 1.5rem 2rem;
+    @media screen and (max-width: $bp-small) {
+      font-size: var(--font-size);
+    }
+  }
+  &__text {
+    font-size: 1.6rem;
+    padding: 1.5rem 2rem;
+    line-height: 2.5rem;
+  }
+}
+// QUESTIONS FAQ SECTION
+.faq-heading {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: var(--font-weight);
+  text-transform: capitalize;
+  margin: 5rem 0 2.5rem 0;
+  padding: 2rem 0 1rem 0;
+  color: var(--Primary-dark);
+  @media screen and (max-width: $bp-small) {
+    font-size: var(--font-size);
+  }
+}
+.faqs {
+  display: flex;
+  //   margin: var(--margin);
+  @media screen and (max-width: $bp-small) {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+.faq-one {
+  &__item {
+    list-style: none;
+    padding: 1.5rem;
+  }
+
+  &__link {
+    font-size: 1.6rem;
+    background: var(--Primary-dark);
+    border: none;
+    border-radius: 3rem;
+    padding: 1rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      background: var(--color-primary);
+    }
+  }
+}
+// FOOTER SECTION====
+.footer-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  @media screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
+}
+.foot {
+  flex: 0 0 45%;
+  @media screen and (max-width: $bp-small) {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  &__item {
+    list-style: none;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: var(--Grey-dark-1);
+    transition: all 0.3s;
+    &:hover {
+      color: var(--Primary-dark);
+    }
+    @media screen and (max-width: $bp-small) {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.foot-form {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  background: var(--Grey-dark-3);
+  &__text {
+    color: var(--Primary-dark);
+    font-weight: 600;
+  }
+  &__label {
+    word-spacing: 0.5rem;
+    color: var(--Primary-dark);
+  }
+  &__input {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 1rem;
+    margin: 1.5rem 0 0.7rem 0;
+    &:focus {
+      outline-color: var(--Primary-dark);
+    }
+  }
+}
