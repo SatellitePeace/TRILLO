@@ -78,7 +78,7 @@
   &__main--div {
     margin-top: 2rem;
     display: flex;
-    gap: 5rem;
+    gap: 3rem;
     max-width: 77%;
     padding: 3.3rem;
     background: rgba(255, 255, 255, 0.6);
@@ -90,11 +90,11 @@
   &__box--form {
     width: 100%;
   }
-  &__div--two {
-    @media screen and (max-width: $bp-small) {
-      margin-left: 3.3rem;
-    }
-  }
+  // &__div--two {
+  //   @media screen and (max-width: $bp-small) {
+  //     margin-left: 3.3rem;
+  //   }
+  // }
   &__input--form {
     width: 100%;
     padding: 0.8rem 1rem;
@@ -117,6 +117,12 @@
     width: 100%;
     padding: 0.8rem 0;
     margin: 0.5rem 0;
+  }
+  &__div--one {
+    margin-right: 2.25rem;
+  }
+  &__div--two {
+    margin-left: 2.25rem;
   }
   &__checkbox {
     cursor: pointer;

@@ -2043,7 +2043,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 5rem;
+  gap: 3rem;
   max-width: 77%;
   padding: 3.3rem;
   background: rgba(255, 255, 255, 0.6);
@@ -2051,12 +2051,6 @@ body {
 
 .flight__input, .flight__date, .flight__oneway, .flight__main--form, .flight__box--form {
   width: 100%;
-}
-
-@media screen and (max-width: 37.5em) {
-  .flight__div--two {
-    margin-left: 3.3rem;
-  }
 }
 
 .flight__input--form {
@@ -2083,6 +2077,14 @@ body {
   width: 100%;
   padding: 0.8rem 0;
   margin: 0.5rem 0;
+}
+
+.flight__div--one {
+  margin-right: 2.25rem;
+}
+
+.flight__div--two {
+  margin-left: 2.25rem;
 }
 
 .flight__checkbox {
