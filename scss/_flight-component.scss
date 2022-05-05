@@ -83,9 +83,6 @@
     max-width: 77%;
     padding: 3rem;
     background: rgba(255, 255, 255, 0.6);
-    @media screen and (max-width: $bp-small) {
-      margin-right: 1.5rem;
-    }
   }
   &__input,
   &__date,
@@ -93,6 +90,9 @@
   &__main--form,
   &__box--form {
     width: 100%;
+  }
+  &__div--two {
+    margin-left: 1.5rem;
   }
   &__input--form {
     width: 100%;
